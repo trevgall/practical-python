@@ -30,6 +30,5 @@ while principal > 0:
         print(month, round(total_paid, 2), round(principal, 2))
 
 #print('Total paid', round(total_paid, 2))
-t_summary = f'Total paid : ${total_paid:0.2f}'
-print(t_summary)
+print(f'Total paid : ${total_paid:0.2f}')
 print('Total number of months : ', month)
