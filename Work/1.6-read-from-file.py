@@ -14,7 +14,7 @@ print('\nNow try to list the individual namespace and associated ingress... \n')
 with open(file, 'rt') as ingressfile:                       # Open the file to read
     for line in ingressfile:                                # Parse through the file one line at a time
         line = line.rstrip('\n')                            # Strip off the trailing (\n) new line chars
-        namespaceIngress = line.split(' ')                  # Split the text into a list 
+        namespaceIngress = line.split(' ')                  # Split each line of text into a list 
         print(f'Namespace : {namespaceIngress[0]:25} Ingress : {namespaceIngress[1]:10}')       # Print each element of the list 
                                                                                                 # (notice the f-string formatting to beautify the output)
 
