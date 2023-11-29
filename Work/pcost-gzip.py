@@ -1,10 +1,12 @@
-# pcost.py
+# pcost-gzip.py
 #
-# Exercise 1.27
+# Exercise 1.27 - modified to work with a gzip compressed archive file 
+
+import gzip 
 
 totalcost = 0
 
-with open('Data/portfolio.csv', 'rt') as file:              # open the file for reading
+with gzip.open('Data/portfolio.csv.gz', 'rt') as file:      # Open the gzip file for reading
     header = next(file).split(',')                          # Get rid of the first header line 
     for line in file:                                       # Parse through the rest of the file, one line at a time
         line = line.rstrip('\n')                            # Strip out the new line chars 
